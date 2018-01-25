@@ -13,6 +13,10 @@ public class ProductTest {
     }
 
     @Test
-    public void 
+    public void productShouldHaveAPreviousPrice(){
+        Product product = new Product();
+        product.setPrice(50);
+        Assert.assertEquals(100,product.getPreviousPrice());
+    }
 
 }
