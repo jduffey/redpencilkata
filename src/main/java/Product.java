@@ -5,6 +5,7 @@ public class Product {
 
     private int currentPrice = 100;
     private int previousPrice;
+    private boolean isPromotionActive;
 
     public int getCurrentPrice() {
 
@@ -18,5 +19,9 @@ public class Product {
 
     public int getPreviousPrice() {
         return previousPrice;
+    }
+
+    public boolean isPromotionActive() {
+        return isPromotionActive;
     }
 }

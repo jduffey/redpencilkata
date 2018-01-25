@@ -19,4 +19,10 @@ public class ProductTest {
         Assert.assertEquals(100,product.getPreviousPrice());
     }
 
+    @Test
+    public void promotionIsInactiveWhenProductIsInstantiated(){
+        Product product = new Product();
+        Assert.assertFalse(product.isPromotionActive());
+    }
+
 }
