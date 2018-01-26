@@ -25,4 +25,11 @@ public class ProductTest {
         Assert.assertFalse(product.isPromotionActive());
     }
 
+    @Test
+    public void productShouldHaveAMostRecentPriceChangeAsARatioField(){
+        Product product = new Product();
+        product.setPrice(90);
+        Assert.assertEquals(-.1,product.getMostRecentPriceChangeAsARatio(),.0001);
+    }
+
 }

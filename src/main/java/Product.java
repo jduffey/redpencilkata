@@ -5,7 +5,8 @@ public class Product {
 
     private int currentPrice = 100;
     private int previousPrice;
-    private boolean isPromotionActive;
+    private boolean promotionStatus;
+    private double mostRecentPriceChangeAsARatio;
 
     public int getCurrentPrice() {
 
@@ -22,6 +23,11 @@ public class Product {
     }
 
     public boolean isPromotionActive() {
-        return isPromotionActive;
+        return promotionStatus;
+    }
+
+    public double getMostRecentPriceChangeAsARatio() {
+        mostRecentPriceChangeAsARatio = (double)(currentPrice - previousPrice)/(previousPrice);
+        return mostRecentPriceChangeAsARatio;
     }
 }
